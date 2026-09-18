@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-brand-50: #eaf2fb;
+  --color-brand-100: #dce7f1;
+  --color-brand-200: #bfd5ea;
+  --color-brand-500: #0b5cab;
+  --color-brand-600: #174ea6;
+  --color-brand-700: #0b3d91;
+  --color-brand-800: #082c68;
+
+  --color-ink-900: #182533;
+  --color-ink-700: #3d4a59;
+  --color-ink-500: #64748b;
+
+  --color-surface: #ffffff;
+  --color-bg: #f5f8fc;
+  --color-border: #dde6ee;
+
+  --color-accent-green: #16845a;
+  --color-accent-red: #c2183a;
+
+  --animate-fade-in: fade-in 0.7s ease-out both;
+  --animate-fade-in-delay: fade-in 0.7s ease-out 0.15s both;
+  --animate-float: float 7s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(1deg);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
